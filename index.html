@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    Shivam site id222
+    Shivam site id222 with clicked functionality
     <div>Hello </div>
     <h1>Hi </h1>
     <h1>Deployed with t333 </h1>
-    <button>Btn 1</button>
-    <button>Btn 2</button>
+    <button id="button1">Btn 1</button>
+    <button id="button2">Btn 2</button>
     <input type="text" id="fname" name="fname" placeholder="write something"><br>
 
     <form action="">
@@ -22,5 +22,15 @@
         <input type="text" id="lname" name="lname" value="Doe"><br><br>
         <input type="submit" value="Submit">
     </form> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+
+            button1.onclick = () => umami.track('Btn 1 clicked');
+            button2.onclick = () => umami.track('Btn 2 clicked');
+        });
+    </script>
 </body>
 </html>
